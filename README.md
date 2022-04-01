@@ -15,4 +15,7 @@
 * Contiene la pagina para recuperar contraseña mediante firebase.
 
 5. v0.5 - Pagina para usuarios suspendidos
-* Muestra un mensaje donde se indica que su cuenta esta suspendida y los correos para comunicarse con los administradores
+* Muestra un mensaje donde se indica que su cuenta esta suspendida y los correos para comunicarse con los administradores.
+
+6. v0.6 - Cerrar Sesion 
+* Cierra la sesion del usuario de forma segura.
