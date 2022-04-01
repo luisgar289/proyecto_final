@@ -9,6 +9,7 @@ urls = (
     '/suspend', 'mvc.controllers.public.suspend.Suspend', #ruta para usuarios suspendidos
     '/logout', 'mvc.controllers.public.logout.Logout', #ruta para cerrar sesión
     '/bienvenida_operador', 'mvc.controllers.operador.bienvenida_operador.Bienvenida_operador', #ruta de bienvenida_operador
+    '/bienvenida_admin', 'mvc.controllers.admin.bienvenida_admin.Bienvenida_admin', #ruta de bienvenida_admin
 )
 app = web.application(urls, globals())
 wsgiapp = app.wsgifunc()

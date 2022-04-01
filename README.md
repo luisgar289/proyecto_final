@@ -22,3 +22,6 @@
 
 7. v0.7 - Bienvenida Operador
 * Contiene la pagina de bienvenida del operador.
+
+8. v0.8 - Bienvenida Administrador
+* Pagina de bienvenida para administrador.
