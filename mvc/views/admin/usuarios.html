@@ -1,0 +1,49 @@
+$def with (users)
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista Usuarios</title>
+        <link rel="stylesheet" href="static/css/admin.css">
+    </head>
+    <body>
+        <header>
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu"><img src="img/icon_menu.png" style="width: 100%;" alt=""/></label>
+            <nav class="menu">
+                <ul>
+                    <li><img src="/static/img/BANNER_LT.png"></li>
+                    <li style="margin-left: 70%;"><a href="/bienvenida_admin">Inicio</a></li>
+                    <li><a href="/login">Salir</a></li>
+                </ul>
+            </nav>
+        </header>
+        <table>
+            <thead>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Estado</th>
+                <th>Nivel</th>
+                <th></th>
+                <th></th>
+            </thead>
+            $for user in users:
+            <tbody>
+                <td>$user.val().get('nombre')</td>
+                <td>$user.val().get('email')</td>
+                <td>$user.val().get('telefono')</td>
+                $if user.val().get('status') == 'true':
+                    <td>Activo</td>
+                $else:
+                    <td>Inactivo</td>
+                $if user.val().get('level') == 'admin':
+                    <td>Administrador</td>
+                $else:
+                    <td>Operador</td>
+                <td><a href="/editar_usuario/$user.key()">Actualizar</a></td>
+                <td><a href="/suspender_usuario/$user.key()">Suspender</a></td>
+            </tbody>
+        </table>
+        <a href="/registrar_usuario">Registrar Usuario</a>
+    </body>
+</html>

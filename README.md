@@ -25,3 +25,6 @@
 
 8. v0.8 - Bienvenida Administrador
 * Pagina de bienvenida para administrador.
+
+9. v0.9 - Registro de usuarios
+* Contiene la pagina que muestra a los usuarios registrados en el sistema.
