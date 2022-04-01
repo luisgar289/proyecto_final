@@ -28,3 +28,6 @@
 
 9. v0.9 - Registro de usuarios
 * Contiene la pagina que muestra a los usuarios registrados en el sistema.
+
+10. v0.10 - Editar Usuarios
+* Pagina para editar datos de los usuarios.
