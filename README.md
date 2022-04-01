@@ -31,3 +31,6 @@
 
 10. v0.10 - Editar Usuarios
 * Pagina para editar datos de los usuarios.
+
+11. v0.11 - Suspender Usuario
+* Codigo para suspender a un usuario del sistema.
