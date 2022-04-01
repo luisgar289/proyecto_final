@@ -19,3 +19,6 @@
 
 6. v0.6 - Cerrar Sesion 
 * Cierra la sesion del usuario de forma segura.
+
+7. v0.7 - Bienvenida Operador
+* Contiene la pagina de bienvenida del operador.
