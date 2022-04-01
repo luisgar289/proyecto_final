@@ -6,6 +6,7 @@ urls = (
     '/', 'mvc.controllers.public.index.Index', #se indica la ruta donde esta el archivo .py
     '/login', 'mvc.controllers.public.login.Login', #ruta de login
     '/recuperar_contrasena','mvc.controllers.public.recuperar.Recuperar', #ruta de recuperar contraseña
+    '/suspend', 'mvc.controllers.public.suspend.Suspend', #ruta para usuarios suspendidos
 )
 app = web.application(urls, globals())
 wsgiapp = app.wsgifunc()

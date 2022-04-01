@@ -13,3 +13,6 @@
 
 4. v0.4 - Pagina para Recuperar Contraseña
 * Contiene la pagina para recuperar contraseña mediante firebase.
+
+5. v0.5 - Pagina para usuarios suspendidos
+* Muestra un mensaje donde se indica que su cuenta esta suspendida y los correos para comunicarse con los administradores
