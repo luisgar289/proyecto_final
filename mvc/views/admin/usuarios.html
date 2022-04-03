@@ -18,35 +18,39 @@ $def with (users)
                 </ul>
             </nav>
         </header>
-        <table class="table" style="margin-left: auto; margin-right: auto; width: 97%;">
-            <thead>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-                <th>Usuario</th>
-                <th>Tipo</th>
-                <th colspan="2" style="text-align: center;">Acciones</th>
-            </thead>
-            $for user in users:
-            <tbody>
-                <td>$user.val().get('nombre')</td>
-                <td>$user.val().get('email')</td>
-                <td>$user.val().get('telefono')</td>
-                $if user.val().get('status') == 'true':
-                    <td>Activo</td>
-                $else:
-                    <td>Inactivo</td>
-                $if user.val().get('level') == 'admin':
-                    <td>Administrador</td>
-                $else:
-                    <td>Operador</td>
-                <td><a href="/editar_usuario/$user.key()">Actualizar</a></td>
-                $if user.val().get('status') == 'true':
-                    <td><a href="/suspender_usuario/$user.key()">Suspender</a></td>
-                $else:
-                    <td><a href="/suspender_usuario/$user.key()">Activar</a></td>
-            </tbody>
-        </table>
-        <a href="/registrar_usuario">Registrar Usuario</a>
+        <div class="padre">
+            <table class="table" style="margin-left: auto; margin-right: auto; width: 97%;">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Usuario</th>
+                    <th>Tipo</th>
+                    <th colspan="2" style="text-align: center;">Acciones</th>
+                </thead>
+                $for user in users:
+                <tbody>
+                    <td>$user.val().get('nombre')</td>
+                    <td>$user.val().get('email')</td>
+                    <td>$user.val().get('telefono')</td>
+                    $if user.val().get('status') == 'true':
+                        <td>Activo</td>
+                    $else:
+                        <td>Inactivo</td>
+                    $if user.val().get('level') == 'admin':
+                        <td>Administrador</td>
+                    $else:
+                        <td>Operador</td>
+                    <td><button class="btn btn-primary" style="margin-left: auto; margin-right: auto; width: 60%; background-color: rgb(94, 217, 255); border:0;"><a href="/editar_usuario/$user.key()">Actualizar</a></button></td>
+                    $if user.val().get('status') == 'true':
+                        <td><button class="btn btn-primary" style="margin-left: auto; margin-right: auto; width: 60%; background-color: rgb(255, 94, 94); border:0;"><a href="/suspender_usuario/$user.key()">Suspender</a></button></td>
+                    $else:
+                        <td><button class="btn btn-primary" style="margin-left: auto; margin-right: auto; width: 60%; background-color: rgb(126, 255, 94); border:0;"><a href="/suspender_usuario/$user.key()">Activar</a></button></td>
+                </tbody>
+            </table>
+            <div class="letter">
+                <button class="btn btn-primary" style="margin-left: auto; margin-right: auto; width: 97%;"><a href="/registrar_usuario">Nuevo Usuario</a></button>
+            </div>
+        </div>
     </body>
 </html>

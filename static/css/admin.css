@@ -56,8 +56,6 @@ h1{
 
 .padre{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
@@ -73,4 +71,32 @@ th, td {
     box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
     padding: 5px;
     width: 500px;
+}
+
+.letter{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 15px;
+    width: 150px;
+}
+
+button a, button a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+td a, td a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+td button{
+    background-color: #6bab4e;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer;
 }
