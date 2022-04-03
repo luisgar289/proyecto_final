@@ -28,10 +28,10 @@ class Registrar_usuario: #pagin sign up
             user = auth.create_user_with_email_and_password(email, password) #crea un nuevo usuario en firebase
             datos = {'nombre': nombre, 'telefono': telefono, 'email':email, 'level':nivel, 'status':estado} #crea un diccionario con los datos del usuario
             resultados = db.child("usuarios").child(user['localId']).set(datos) #guarda los datos en la base de datos
-            return web.seeother('/login') #redirecciona a la pagina del login
+            return web.seeother('/usuarios') #redirecciona a la pagina del login
         except Exception as error: #recopila los datos del error
             formato = json.loads(error.args[1])
             error = formato['error']
             message = error['message']
             print("Error signup.POST: {}".format(message)) #imprime en la terminal el error
-            return render.registrar(message) #muestra la pagina signup.html con el error
+            return render.registrar_usuario(message) #muestra la pagina signup.html con el error
