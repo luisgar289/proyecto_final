@@ -12,7 +12,7 @@ db = firebase.database()
 class Registrar_usuario: #pagin sign up
     def GET(self):
         message = None
-        return render.registrar(message)
+        return render.registrar_usuario(message)
 
     def POST(self):
         try:
