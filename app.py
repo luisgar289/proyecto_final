@@ -13,6 +13,7 @@ urls = (
     '/usuarios', 'mvc.controllers.admin.usuarios.Usuarios', #ruta para ver la lista de usuarios
     '/editar_usuario/(.*)', 'mvc.controllers.admin.editar_usuario.Editar_usuario', #ruta para actualizar usuarios
     '/suspender_usuario/(.*)', 'mvc.controllers.admin.suspender_usuario.Suspender_usuario', #ruta para suspender usuarios
+    '/registrar_usuario', 'mvc.controllers.admin.registrar_usuario.Registrar_usuario', #ruta para registrar usuarios
 )
 app = web.application(urls, globals())
 wsgiapp = app.wsgifunc()

@@ -34,3 +34,6 @@
 
 11. v0.11 - Suspender Usuario
 * Codigo para suspender a un usuario del sistema.
+
+12. v0.12 - Registrar Usuario
+* Pagina y codigo para poder crear un nuevo usuario.
