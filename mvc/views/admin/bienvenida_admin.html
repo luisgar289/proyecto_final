@@ -1,3 +1,4 @@
+$def with (estado)
 <html>
     <head>
         <title>Bienvenido Administrador</title>
@@ -30,6 +31,12 @@
                 </div>
                 <div class="card">
                     <p class="text"><i class="bi bi-snow"></i>Sistema enfriamiento</p> 
+                    <form method="post">
+                        $if (estado.val() == '1'):
+                            <button type="submit" value="0" name="enfriamiento_s1" class="btn-off">Apagado</button>
+                        $else:
+                            <button type="submit" value="1" name="enfriamiento_s1" class="btn-on">Encendido</button>
+                    </form>
                 </div>
             </div>
             <h3>Sucursal 2</h3>

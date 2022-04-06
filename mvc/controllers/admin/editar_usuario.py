@@ -22,7 +22,7 @@ class Editar_usuario:
             telefono = formulario.telefono
             nivel = formulario.nivel
             datos = {'nombre': nombre, 'telefono': telefono, 'email':email, 'level':nivel} #crea un diccionario con los datos del usuario
-            resultados = db.child("usuarios").child(id).update(datos) #guarda los datos en la base de datos
+            resultados = db.child("sen").child(id).update(datos) #guarda los datos en la base de datos
             return web.seeother('/usuarios') #redirecciona a la pagina de usuarios
         except Exception as error:
             print("Error actualizar_usuario.POST: {}".format(error)) #imprime en la terminal el error
