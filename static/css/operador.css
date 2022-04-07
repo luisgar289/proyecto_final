@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
 body{
     margin: 0;
-    font-family: 'Merriweather', serif;
+    font-family: 'Fredoka', sans-serif;
 }
 
 header{
     width: 100%;
-    background: #4E94AB;
+    background: #50ACC8;
 }
 
 #btn-menu{
