@@ -1,4 +1,4 @@
-$def with (estado)
+$def with (estado_s1, estado_s2)
 <html>
     <head>
         <title>Bienvenido Administrador</title>
@@ -23,19 +23,21 @@ $def with (estado)
             <div class="sucursal">
                 <div class="card">
                     <p class="text"><i class="bi bi-thermometer-high"></i>Temperatura</p>
-                    <p class="data"><span id="tem_s1">{{tem_s1}}</span>&deg;C</p>   
+                    <p class="data"><span id="tem_s1"></span>&deg;C</p>   
                 </div>
                 <div class="card">
                     <p class="text"><i class="bi bi-droplet-fill"></i>Humedad</p>
-                    <p class="data"><span id="hum_s1">{{hum_s1}}</span>&percnt;</p>
+                    <p class="data"><span id="hum_s1"></span>&percnt;</p>
                 </div>
                 <div class="card">
                     <p class="text"><i class="bi bi-snow"></i>Sistema enfriamiento</p> 
                     <form method="post">
-                        $if (estado.val() == '1'):
-                            <button type="submit" value="0" name="enfriamiento_s1" class="btn-off">Apagado</button>
+                        <input type="text" style="display: none;" value="$estado_s2.val()" name="enfriamiento_s2"/>
+                        $if (estado_s1.val() == '1'):
+                            <button type="submit" value="0" name="enfriamiento_s1" class="btn-off">Apagar</button>
                         $else:
-                            <button type="submit" value="1" name="enfriamiento_s1" class="btn-on">Encendido</button>
+                            <button type="submit" value="1" name="enfriamiento_s1" class="btn-on">Encender</button>
+                        
                     </form>
                 </div>
             </div>
@@ -43,14 +45,21 @@ $def with (estado)
             <div class="sucursal">
                 <div class="card">
                     <p class="text"><i class="bi bi-thermometer-half"></i>Temperatura</p>
-                    <p class="data"><span id="tem_s2">{{tem_s1}}</span>&deg;C</p>   
+                    <p class="data"><span id="tem_s2"></span>&deg;C</p>   
                 </div>
                 <div class="card">
                     <p class="text"><i class="bi bi-droplet-fill"></i>Humedad</p>
-                    <p class="data"><span id="hum_s2">{{hum_s1}}</span>&percnt;</p>
+                    <p class="data"><span id="hum_s2"></span>&percnt;</p>
                 </div>
                 <div class="card">
-                    <p class="text"><i class="bi bi-snow"></i>Sistema enfriamiento</p> 
+                    <p class="text"><i class="bi bi-snow"></i>Sistema enfriamiento</p>
+                    <form method="post">
+                        <input type="text" style="display: none;" value="$estado_s1.val()" name="enfriamiento_s1"/>
+                        $if (estado_s2.val() == '1'):
+                            <button type="submit" value="0" name="enfriamiento_s2" class="btn-off">Apagar</button>
+                        $else:
+                            <button type="submit" value="1" name="enfriamiento_s2" class="btn-on">Encender</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -72,5 +81,5 @@ $def with (estado)
             /*document.getElementById('').innerHTML = json[''].temperatura;*/
         };
         request.send();
-    }, 5000);
+    }, 100);
 </script>

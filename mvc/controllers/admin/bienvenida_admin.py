@@ -11,12 +11,16 @@ db = firebase.database()
 
 class Bienvenida_admin:
     def GET(self):
-        estado = db.child("sensores").child("sucursal1").child("enfriamiento").get()
-        return render.bienvenida_admin(estado)
+        estado_s1 = db.child("sensores").child("sucursal1").child("enfriamiento").get()
+        estado_s2 = db.child("sensores").child("sucursal2").child("enfriamiento").get()
+        return render.bienvenida_admin(estado_s1, estado_s2)
 
     def POST(self):
         form = web.input()
-        enfriamiento = form.enfriamiento_s1
-        db.child("sensores").child("sucursal1").update({"enfriamiento": enfriamiento})
-        estado = db.child("sensores").child("sucursal1").child("enfriamiento").get()
-        return render.bienvenida_admin(estado)
+        s1 = form.enfriamiento_s1
+        s2 = form.enfriamiento_s2
+        db.child("sensores").child("sucursal1").update({"enfriamiento": s1})
+        db.child("sensores").child("sucursal2").update({"enfriamiento": s2})
+        estado_s1 = db.child("sensores").child("sucursal1").child("enfriamiento").get()
+        estado_s2 = db.child("sensores").child("sucursal2").child("enfriamiento").get()
+        return render.bienvenida_admin(estado_s1, estado_s2)
