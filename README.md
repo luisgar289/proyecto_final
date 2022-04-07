@@ -43,3 +43,6 @@
 
 14. v0.16 -Bienvenida + Nombre y Dashboard Operador.
 *Se muestra el mensaje de bienvenida mas el nombre del usuario, asi como el dashboard funcional del Operador
+
+15. v0.17 - Paginas publicas adaptativas a móvil.
+*Las paginas de index, login, recuperar contraseña y cuenta suspendida se adaptan a dispositivos móviles.

@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
 body{
     margin: 0;
-    font-family: 'Merriweather', serif;
+    font-family: 'Fredoka', sans-serif;
 }
 
 header{
@@ -115,4 +117,20 @@ div p{
     font-size: 15px;
     font-weight: bold;
     text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    img{
+        width: 200px;
+    }
+    .contenedor{
+        flex-direction: column;
+    }
+    .formulario{
+        width: 90%;
+    }
+    .hijo{
+        width: 90%;
+    }
 }
