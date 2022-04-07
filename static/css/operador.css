@@ -76,3 +76,50 @@ h1{
     font-weight: bold;
     text-align: center;
 }
+
+.dashboard{
+    background-color: rgba(221, 221, 221, 0.507);
+    padding: 9px;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sucursal{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+.text{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+    color: #005fb8;
+}
+
+.data{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+    color: #000000;
+}

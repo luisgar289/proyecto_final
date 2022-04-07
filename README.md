@@ -38,5 +38,8 @@
 12. v0.12 - Registrar Usuario
 * Pagina y código para poder crear un nuevo usuario.
 
-13. v0.13 : 0.15 - Dashboard completo (Admin)
+13. v0.13 : 0.15 - Dashboard completo (Admin).
 * Obtiene los datos de humedad y temperatura, ademas de integrar el sistema de enfriamiento.
+
+14. v0.16 -Bienvenida + Nombre y Dashboard Operador.
+*Se muestra el mensaje de bienvenida mas el nombre del usuario, asi como el dashboard funcional del Operador

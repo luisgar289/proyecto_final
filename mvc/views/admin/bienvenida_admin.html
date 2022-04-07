@@ -1,4 +1,4 @@
-$def with (estado_s1, estado_s2)
+$def with (estado_s1, estado_s2, nombre)
 <html>
     <head>
         <title>Bienvenido Administrador</title>
@@ -17,7 +17,7 @@ $def with (estado_s1, estado_s2)
                 </ul>
             </nav>
         </header>
-        <h1 style="padding: 15px;">Bienvenid@ <strong>Admin</strong></h1>
+        <h1 style="padding: 15px;">Bienvenid@ <strong>$nombre.val().get('nombre')</strong></h1>
         <div class="dashboard">
             <h3>Sucursal 1</h3>
             <div class="sucursal">
