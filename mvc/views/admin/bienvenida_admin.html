@@ -1,7 +1,10 @@
 $def with (estado_s1, estado_s2, nombre)
 <html>
     <head>
-        <title>Bienvenido Administrador</title>
+        <meta lang="es">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/static/img/ICON_LT.png">
+        <title>Bienvenida Administrador</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
         <link rel="stylesheet" href="static/css/admin.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     </head>
@@ -34,9 +37,9 @@ $def with (estado_s1, estado_s2, nombre)
                     <form method="post">
                         <input type="text" style="display: none;" value="$estado_s2.val()" name="enfriamiento_s2"/>
                         $if (estado_s1.val() == '1'):
-                            <button type="submit" value="0" name="enfriamiento_s1" class="btn-off">Apagar</button>
+                            <button type="submit" value="0" name="enfriamiento_s1" style="background-color: rgba(255, 0, 0, 0.7); border-width: 0px; width: 80px; height: 30px; border-radius: 5px;">Apagar</button>
                         $else:
-                            <button type="submit" value="1" name="enfriamiento_s1" class="btn-on">Encender</button>
+                            <button type="submit" value="1" name="enfriamiento_s1" style="background-color: rgba(0, 255, 0, 0.7); border-width: 0px; width: 80px; height: 30px; border-radius: 5px;">Encender</button>
                         
                     </form>
                 </div>
@@ -56,9 +59,9 @@ $def with (estado_s1, estado_s2, nombre)
                     <form method="post">
                         <input type="text" style="display: none;" value="$estado_s1.val()" name="enfriamiento_s1"/>
                         $if (estado_s2.val() == '1'):
-                            <button type="submit" value="0" name="enfriamiento_s2" class="btn-off">Apagar</button>
+                            <button type="submit" value="0" name="enfriamiento_s2" style="background-color: rgba(255, 0, 0, 0.7); border-width: 0px; width: 80px; height: 30px; border-radius: 5px;">Apagar</button>
                         $else:
-                            <button type="submit" value="1" name="enfriamiento_s2" class="btn-on">Encender</button>
+                            <button type="submit" value="1" name="enfriamiento_s2" style="background-color: rgba(0, 255, 0, 0.7); border-width: 0px; width: 80px; height: 30px; border-radius: 5px;">Encender</button>
                     </form>
                 </div>
             </div>
