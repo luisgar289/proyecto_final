@@ -125,3 +125,38 @@ h1{
     width: 150px;
     color: #000000;
 }
+
+button{
+    width: 80px; 
+    height: 30px;
+}
+
+@media (max-width: 600px) {
+    .sucursal{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 250px;
+        height: 250px;
+    }
+    .text{
+        font-size: 35px;
+        font-weight: bold;
+        text-align: center;
+        width: 250px;
+        color: #005fb8;
+    }
+    .data{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        width: 250px;
+        color: #000000;
+    }
+    button{
+        width: 210px;
+        height: 50px;
+        font-size: 25px;
+    }
+}

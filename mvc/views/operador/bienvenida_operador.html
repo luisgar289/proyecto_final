@@ -36,9 +36,9 @@ $def with (estado_s1, estado_s2, nombre)
                     <form method="post">
                         <input type="text" style="display: none;" value="$estado_s2.val()" name="enfriamiento_s2"/>
                         $if (estado_s1.val() == '1'):
-                            <button type="submit" value="0" name="enfriamiento_s1" style="background-color: rgba(255, 0, 0, 0.7); border-width: 0px; width: 80px; height: 30px; border-radius: 5px;">Apagar</button>
+                            <button type="submit" value="0" name="enfriamiento_s1" style="background-color: rgba(255, 0, 0, 0.7); border-width: 0px; border-radius: 5px;">Apagar</button>
                         $else:
-                            <button type="submit" value="1" name="enfriamiento_s1" style="background-color: rgba(0, 255, 0, 0.7); border-width: 0px; width: 80px; height: 30px; border-radius: 5px;">Encender</button>
+                            <button type="submit" value="1" name="enfriamiento_s1" style="background-color: rgba(0, 255, 0, 0.7); border-width: 0px; border-radius: 5px;">Encender</button>
                         
                     </form>
                 </div>
@@ -58,9 +58,9 @@ $def with (estado_s1, estado_s2, nombre)
                     <form method="post">
                         <input type="text" style="display: none;" value="$estado_s1.val()" name="enfriamiento_s1"/>
                         $if (estado_s2.val() == '1'):
-                            <button type="submit" value="0" name="enfriamiento_s2" style="background-color: rgba(255, 0, 0, 0.7); border-width: 0px; width: 80px; height: 30px; border-radius: 5px;">Apagar</button>
+                            <button type="submit" value="0" name="enfriamiento_s2" style="background-color: rgba(255, 0, 0, 0.7); border-width: 0px; border-radius: 5px;">Apagar</button>
                         $else:
-                            <button type="submit" value="1" name="enfriamiento_s2" style="background-color: rgba(0, 255, 0, 0.7); border-width: 0px; width: 80px; height: 30px; border-radius: 5px;">Encender</button>
+                            <button type="submit" value="1" name="enfriamiento_s2" style="background-color: rgba(0, 255, 0, 0.7); border-width: 0px; border-radius: 5px;">Encender</button>
                     </form>
                 </div>
             </div>

@@ -46,3 +46,6 @@
 
 15. v0.17 - Paginas publicas adaptativas a móvil.
 *Las paginas de index, login, recuperar contraseña y cuenta suspendida se adaptan a dispositivos móviles.
+
+16. v0.18 - Pagina Operador adaptativa a móvil.
+* El dashboard se ajusta a los dispositivos móviles.
