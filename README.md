@@ -52,3 +52,6 @@
 
 17. v0.19 - Estilo adaptativo a móvil y final.
 * Se ajusta el estilo a los dispositivos móviles. Ademas de estar completos los estilos.
+
+18. v0.20 - Proyecto Terminado.
+* Se termina el proyecto final.
