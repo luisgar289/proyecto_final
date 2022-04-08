@@ -49,3 +49,6 @@
 
 16. v0.18 - Pagina Operador adaptativa a móvil.
 * El dashboard se ajusta a los dispositivos móviles.
+
+17. v0.19 - Estilo adaptativo a móvil y final.
+* Se ajusta el estilo a los dispositivos móviles. Ademas de estar completos los estilos.

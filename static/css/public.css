@@ -40,6 +40,10 @@ header label:hover{
     background: rgba(0,0,0,0.3);
 }
 
+#ajuste{
+    margin-left: 70%;
+}
+
 .menu li a{
     display: block;
     padding: 15px 30px;

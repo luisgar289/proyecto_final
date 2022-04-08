@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
 body{
     margin: 0;
-    font-family: 'Merriweather', serif;
+    font-family: 'Fredoka', sans-serif;
 }
 
 header{
@@ -31,7 +33,7 @@ header label:hover{
     padding: 0;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
 }
 
 .menu li:hover{
@@ -43,10 +45,15 @@ header label:hover{
     padding: 15px 30px;
     text-decoration: none;
     color: #fff;
+    font-size: 17px;
 }
 
 .menu img{
     width: 150px;
+}
+
+#ajuste{
+    margin-left: 70%;
 }
 
 h1{
@@ -128,6 +135,13 @@ th, td {
     color: #000000;
 }
 
+button{
+    width: 80px; 
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
 button a, button a:hover{
     color: #fff;
     text-decoration: none;
@@ -138,12 +152,82 @@ td a, td a:hover{
     text-decoration: none;
 }
 
-td button{
-    background-color: #6bab4e;
-    color: #fff;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-    width: 100px;
-    cursor: pointer;
+button{
+    width: 80px; 
+    height: 30px;
+}
+
+@media (max-width: 600px) {
+    #ajuste{
+        margin-left: 0%;
+    }
+    .menu img{
+        display: inline-block;
+    }
+    .sucursal{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 250px;
+        height: 250px;
+    }
+    .text{
+        font-size: 35px;
+        font-weight: bold;
+        text-align: center;
+        width: 250px;
+        color: #005fb8;
+    }
+    .data{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        width: 250px;
+        color: #000000;
+    }
+    button{
+        width: 210px;
+        height: 50px;
+        font-size: 18px;
+    }
+	table, 
+	thead, 
+	tbody, 
+	th, 
+	td, 
+	tr { 
+		display: block; 
+	}
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+ 
+	tr { border: 1px solid #ccc; }
+ 
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 25%; 
+		white-space: normal;
+		text-align:left;
+	}
+ 
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 35%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+	td:before { content: attr(data-title); }
+    .formulario{
+        width: 95%;
+    }
 }
