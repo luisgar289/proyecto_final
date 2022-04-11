@@ -65,7 +65,7 @@ $def with (estado_s1, estado_s2, nombre, temperatura_s1, temperatura_s2)
                     $if (temperatura_s2.val() < 30):
                         <form method="post">
                             <input type="text" style="display: none;" value="$estado_s2.val()" name="enfriamiento_s2"/>
-                            $if (estado_s1.val() == "1"):
+                            $if (estado_s2.val() == "1"):
                                 <button type="submit" value="0" name="enfriamiento_s1" style="background-color: rgba(255, 0, 0, 0.7); border-width: 0px; border-radius: 5px;" disabled>Apagar</button>
                             $else:
                                 <button type="submit" value="1" name="enfriamiento_s1" style="background-color: rgba(0, 255, 0, 0.7); border-width: 0px; border-radius: 5px;" disabled>Encender</button>
@@ -73,7 +73,7 @@ $def with (estado_s1, estado_s2, nombre, temperatura_s1, temperatura_s2)
                     $else:
                         <form method="post">
                         <input type="text" style="display: none;" value="$estado_s2.val()" name="enfriamiento_s2"/>
-                        $if (estado_s1.val() == "1"):
+                        $if (estado_s2.val() == "1"):
                             <button type="submit" value="0" name="enfriamiento_s1" style="background-color: rgba(255, 0, 0, 0.7); border-width: 0px; border-radius: 5px;">Apagar</button>
                         $else:
                             <button type="submit" value="1" name="enfriamiento_s1" style="background-color: rgba(0, 255, 0, 0.7); border-width: 0px; border-radius: 5px;">Encender</button>
