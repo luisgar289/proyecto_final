@@ -8,7 +8,7 @@ firebase = pyrebase.initialize_app(token.firebaseConfig)
 auth = firebase.auth() #verifica la conexión a firebase
 db = firebase.database()
 
-class Suspender_usuario:
+class Activar_usuario:
     def GET(self, localId):
-        desactivar = db.child('usuarios').child(localId).update({'status':'false'})
+        activar = db.child('usuarios').child(localId).update({'status':'true'})
         return web.seeother('/usuarios')

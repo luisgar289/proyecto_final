@@ -48,7 +48,7 @@ $def with (users)
                         $if user.val().get('status') == 'true':
                             <td data-title="Acciones"><button class="btn btn-primary" style="margin-left: auto; margin-right: auto; width: 100px; background-color: rgb(255, 94, 94);; border:0;"><a href="/suspender_usuario/$user.key()">Suspender</a></button></td>
                         $else:
-                            <td data-title="Acciones"><button class="btn btn-primary" style="margin-left: auto; margin-right: auto; width: 100px; background-color: rgb(126, 255, 94); border:0;"><a href="/suspender_usuario/$user.key()">Activar</a></button></td>
+                            <td data-title="Acciones"><button class="btn btn-primary" style="margin-left: auto; margin-right: auto; width: 100px; background-color: rgb(126, 255, 94); border:0;"><a href="/activar_usuario/$user.key()">Activar</a></button></td>
                     </tr>
                 </tbody>
             </table>
