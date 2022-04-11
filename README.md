@@ -55,3 +55,6 @@
 
 18. v0.20 - Proyecto Terminado.
 * Se termina el proyecto final.
+
+19. v0.21 - Proyecto Terminado.
+* Se ajustaron errores asi como se mejoro la seguridad del proyecto.

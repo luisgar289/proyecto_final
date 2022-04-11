@@ -24,8 +24,9 @@ class Login: #pagina login
             #autentica los datos con firebase
             user = auth.sign_in_with_email_and_password(email, password)
             #obtiene los datos del usuario
-            informacion = auth.get_account_info(user['idToken']) 
+            informacion = auth.get_account_info(user['idToken'])
             localId = user['localId'] #obtiene el localId del usuario
+            print("Local Id: " + localId)
             #genera una cookie
             web.setcookie('localid', localId)
             all_users = db.child("usuarios").get() #obtiene todos los usuarios
@@ -42,6 +43,7 @@ class Login: #pagina login
                     else:
                         admin = user.val()['level'] == "admin"
                         return web.seeother('/suspend')
+
         except Exception as error: #recopila y muestra los datos de algun error
             formato = json.loads(error.args[1])
             error = formato['error']

@@ -12,8 +12,19 @@ db = firebase.database()
 
 class Editar_usuario:
     def GET(self, localId):
-        user = db.child('usuarios').child(localId).get() #obtiene todos los usuarios de la base de datos
-        return render.editar_usuario(user)
+        cookie = web.cookies().get('localid') #obtiene la cookie localid
+        all_users = db.child("usuarios").get() #obtiene todos los usuarios de la base de datos
+        for user in all_users.each(): #recorre todos los usuarios
+            usuario = user.key() #obtiene la llave del usuario
+            level = user.val()['level'] #obtiene el nivel del usuario
+            if (usuario == cookie and level == "admin"): #compara la llave con la cookie, si son iguales muestra la pagina bienvenida.html
+                user = db.child('usuarios').child(localId).get() #obtiene todos los usuarios de la base de datos
+                return render.editar_usuario(user)
+                break
+        else: #si no son iguales, redirecciona a la pagina de login
+            web.setcookie('localid', "None")
+            return web.seeother('/login') #redireccion la pagina login.html
+
     def POST(self, localId):
         try:
             #obtiene los datos del formulario
