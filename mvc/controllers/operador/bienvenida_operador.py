@@ -14,7 +14,9 @@ class Bienvenida_operador:
         nombre = db.child("usuarios").child(cookie).get()
         estado_s1 = db.child("sensores").child("sucursal1").child("enfriamiento").get()
         estado_s2 = db.child("sensores").child("sucursal2").child("enfriamiento").get()
-        return render.bienvenida_operador(estado_s1, estado_s2, nombre)
+        temperatura_s1 = db.child("sensores").child("sucursal1").child("temperatura").get()
+        temperatura_s2 = db.child("sensores").child("sucursal2").child("temperatura").get()
+        return render.bienvenida_operador(estado_s1, estado_s2, nombre, temperatura_s1, temperatura_s2)
     
     def POST(self):
         form = web.input()
@@ -26,4 +28,6 @@ class Bienvenida_operador:
         nombre = db.child("usuarios").child(cookie).get()
         estado_s1 = db.child("sensores").child("sucursal1").child("enfriamiento").get()
         estado_s2 = db.child("sensores").child("sucursal2").child("enfriamiento").get()
-        return render.bienvenida_operador(estado_s1, estado_s2, nombre)
+        temperatura_s1 = db.child("sensores").child("sucursal1").child("temperatura").get()
+        temperatura_s2 = db.child("sensores").child("sucursal2").child("temperatura").get()
+        return render.bienvenida_operador(estado_s1, estado_s2, nombre, temperatura_s1, temperatura_s2)
